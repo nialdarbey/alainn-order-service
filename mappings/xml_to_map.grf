@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph author="nialdarbey" created="Tue Apr 22 17:47:30 ART 2014" description="XML To Map" guiVersion="3.4.3.P" id="1398203495809" licenseCode="Unlicensed" licenseType="Unknown" modified="Tue Apr 22 17:47:30 ART 2014" modifiedBy="nialdarbey" name="XML_To_Map" revision="1.0" showComponentDetails="false">
+<Global>
+<Metadata __index="14" __referenceCounter="0" __sourcePath="{http://www.alainn.com/SOA/model/1.0=ns1,http://www.alainn.com/SOA/message/1.0=ns0}/ns0:saveOrder/ns1:Order/items/item/characteristics/characteristic" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="710f0c2c-1bfd-4535-9b26-8ed9cfd808fa" _parent_id="__parent_id" _type="Input" id="5e0227fa-a4c6-4dc6-a605-374fcdb86101">
+<Record fieldDelimiter="," name="characteristic" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __index="14" __sourcePath="{http://www.alainn.com/SOA/model/1.0=ns1,http://www.alainn.com/SOA/message/1.0=ns0}/ns0:saveOrder/ns1:Order/items/item/characteristics/characteristic/@name" containerType="SINGLE" label="name" name="name" type="string"/>
+<Field __index="15" __sourcePath="{http://www.alainn.com/SOA/model/1.0=ns1,http://www.alainn.com/SOA/message/1.0=ns0}/ns0:saveOrder/ns1:Order/items/item/characteristics/characteristic/@text()" containerType="SINGLE" label="text()" name="text" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="6" __referenceCounter="1" __schemaType="{http://www.alainn.com/SOA/model/1.0}orderSkuType" __sourcePath="{http://www.alainn.com/SOA/model/1.0=ns1,http://www.alainn.com/SOA/message/1.0=ns0}/ns0:saveOrder/ns1:Order/items/item" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="d74e4a6c-c743-4647-bd03-00c1821b2542" _parent_id="__parent_id" _type="Input" id="710f0c2c-1bfd-4535-9b26-8ed9cfd808fa">
+<Record fieldDelimiter="," name="item" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __index="6" __schemaType="{http://www.alainn.com/SOA/model/1.0}orderSkuType" __sourcePath="{http://www.alainn.com/SOA/model/1.0=ns1,http://www.alainn.com/SOA/message/1.0=ns0}/ns0:saveOrder/ns1:Order/items/item/id" containerType="SINGLE" label="id" name="id" type="string"/>
+<Field __index="7" __schemaType="{http://www.alainn.com/SOA/model/1.0}orderSkuType" __sourcePath="{http://www.alainn.com/SOA/model/1.0=ns1,http://www.alainn.com/SOA/message/1.0=ns0}/ns0:saveOrder/ns1:Order/items/item/type" containerType="SINGLE" label="type" name="type" type="string"/>
+<Field __index="8" __schemaType="{http://www.alainn.com/SOA/model/1.0}orderSkuType" __sourcePath="{http://www.alainn.com/SOA/model/1.0=ns1,http://www.alainn.com/SOA/message/1.0=ns0}/ns0:saveOrder/ns1:Order/items/item/name" containerType="SINGLE" label="name" name="name" type="string"/>
+<Field __index="9" __schemaType="{http://www.alainn.com/SOA/model/1.0}orderSkuType" __sourcePath="{http://www.alainn.com/SOA/model/1.0=ns1,http://www.alainn.com/SOA/message/1.0=ns0}/ns0:saveOrder/ns1:Order/items/item/summary" containerType="SINGLE" label="summary" name="summary" type="string"/>
+<Field __index="10" __schemaType="{http://www.alainn.com/SOA/model/1.0}orderSkuType" __sourcePath="{http://www.alainn.com/SOA/model/1.0=ns1,http://www.alainn.com/SOA/message/1.0=ns0}/ns0:saveOrder/ns1:Order/items/item/imageUrl" containerType="SINGLE" label="imageUrl" name="imageUrl" type="string"/>
+<Field __index="11" __schemaType="{http://www.alainn.com/SOA/model/1.0}orderSkuType" __sourcePath="{http://www.alainn.com/SOA/model/1.0=ns1,http://www.alainn.com/SOA/message/1.0=ns0}/ns0:saveOrder/ns1:Order/items/item/sku" containerType="SINGLE" label="sku" name="sku" type="string"/>
+<Field __index="12" __schemaType="{http://www.alainn.com/SOA/model/1.0}orderSkuType" __sourcePath="{http://www.alainn.com/SOA/model/1.0=ns1,http://www.alainn.com/SOA/message/1.0=ns0}/ns0:saveOrder/ns1:Order/items/item/price" containerType="SINGLE" label="price" name="price" type="number"/>
+<Field __index="13" __schemaType="{http://www.alainn.com/SOA/model/1.0}orderSkuType" __sourcePath="{http://www.alainn.com/SOA/model/1.0=ns1,http://www.alainn.com/SOA/message/1.0=ns0}/ns0:saveOrder/ns1:Order/items/item/quantityInStock" containerType="SINGLE" label="quantityInStock" name="quantityInStock" type="integer"/>
+<Field __index="16" __schemaType="{http://www.alainn.com/SOA/model/1.0}orderSkuType" __sourcePath="{http://www.alainn.com/SOA/model/1.0=ns1,http://www.alainn.com/SOA/message/1.0=ns0}/ns0:saveOrder/ns1:Order/items/item/transactionQuantity" containerType="SINGLE" label="transactionQuantity" name="transactionQuantity" type="integer"/>
+<Field __index="17" __schemaType="{http://www.alainn.com/SOA/model/1.0}orderSkuType" __sourcePath="{http://www.alainn.com/SOA/model/1.0=ns1,http://www.alainn.com/SOA/message/1.0=ns0}/ns0:saveOrder/ns1:Order/items/item/status" containerType="SINGLE" label="status" name="status" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="0" __referenceCounter="1" __sourcePath="{}/record" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _type="Output" id="f34eccb5-d5c1-4ba7-ac63-60b66d9d6a0b">
+<Record fieldDelimiter="," name="record" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __index="0" __sourcePath="{}/record/order_x005fid" containerType="SINGLE" label="order_id" name="order_id" type="string"/>
+<Field __index="2" __sourcePath="{}/record/quantity" containerType="SINGLE" label="quantity" name="quantity" type="integer"/>
+<Field __index="1" __sourcePath="{}/record/sku_x005fitem_x005fid" containerType="SINGLE" label="sku_item_id" name="sku_item_id" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="0" __referenceCounter="0" __sourcePath="{http://www.alainn.com/SOA/message/1.0=ns0}/ns0:saveOrder" _dataStructure="OBJECT" _id="__id" _type="Input" id="d74e4a6c-c743-4647-bd03-00c1821b2542">
+<Record fieldDelimiter="," name="saveOrder" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __index="0" __sourcePath="{http://www.alainn.com/SOA/model/1.0=ns1,http://www.alainn.com/SOA/message/1.0=ns0}/ns0:saveOrder/ns1:CustomerId" containerType="SINGLE" label="CustomerId" name="CustomerId" type="string"/>
+<Field __index="1" __schemaType="{http://www.alainn.com/SOA/model/1.0}orderType" __sourcePath="{http://www.alainn.com/SOA/model/1.0=ns1,http://www.alainn.com/SOA/message/1.0=ns0}/ns0:saveOrder/ns1:Order/id" containerType="SINGLE" label="id" name="id" type="long"/>
+<Field __index="2" __schemaType="{http://www.alainn.com/SOA/model/1.0}orderType" __sourcePath="{http://www.alainn.com/SOA/model/1.0=ns1,http://www.alainn.com/SOA/message/1.0=ns0}/ns0:saveOrder/ns1:Order/total" containerType="SINGLE" label="total" name="total" type="number"/>
+<Field __index="3" __schemaType="{http://www.alainn.com/SOA/model/1.0}orderType" __sourcePath="{http://www.alainn.com/SOA/model/1.0=ns1,http://www.alainn.com/SOA/message/1.0=ns0}/ns0:saveOrder/ns1:Order/discount" containerType="SINGLE" label="discount" name="discount" type="number"/>
+<Field __index="4" __schemaType="{http://www.alainn.com/SOA/model/1.0}orderType" __sourcePath="{http://www.alainn.com/SOA/model/1.0=ns1,http://www.alainn.com/SOA/message/1.0=ns0}/ns0:saveOrder/ns1:Order/pickupLocation" containerType="SINGLE" label="pickupLocation" name="pickupLocation" type="string"/>
+<Field __index="5" __schemaType="{http://www.alainn.com/SOA/model/1.0}orderType" __sourcePath="{http://www.alainn.com/SOA/model/1.0=ns1,http://www.alainn.com/SOA/message/1.0=ns0}/ns0:saveOrder/ns1:Order/pickupDate" containerType="SINGLE" label="pickupDate" name="pickupDate" type="date"/>
+</Record>
+</Metadata>
+<Dictionary>
+<Entry id="DictionaryEntry0" input="true" name="inputPayload" output="false" type="object"/>
+<Entry id="DictionaryEntry1" input="false" name="outputPayload" output="true" type="object"/>
+<Entry dictval.__javaType="java.lang.String" id="DictionaryEntry2" input="true" name="orderId" output="true" type="string"/>
+</Dictionary>
+</Global>
+<Phase number="0">
+<Node enabled="enabled" guiName="Foreach 'item' -&gt; 'record'" guiX="460" guiY="20" id="FOREACH_ITEM_RECORD" transformClass="com.mulesoft.datamapper.transform.MelRecordTransform" type="REFORMAT">
+<attr name="melScript"><![CDATA[//MEL
+//START -> DO NOT REMOVE
+output.__id = input.__id;
+//END -> DO NOT REMOVE
+output.quantity = input.transactionQuantity;
+output.sku_item_id = input.sku;
+output.order_id = inputArguments.orderId;]]></attr>
+</Node>
+<Node cacheInMemory="true" enabled="enabled" fileURL="dict:outputPayload" guiName="Map&lt;k,v&gt; WRITER" guiX="900" guiY="20" id="MAP_WRITER0" type="MAP_WRITER">
+<attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<clover:collection clover:name="record" xmlns:clover="http://www.cloveretl.com/ns/xmlmapping">
+  <item clover:inPort="0">
+    <clover:element clover:name="order_id">$0.order_id</clover:element>
+    <clover:element clover:name="sku_item_id">$0.sku_item_id</clover:element>
+    <quantity>$0.quantity</quantity>
+  </item>
+</clover:collection>]]></attr>
+<attr name="_data_format"><![CDATA[MAP]]></attr>
+</Node>
+<Node charset="UTF-8" enabled="enabled" fileURL="dict:inputPayload" guiName="XML READER" guiX="20" guiY="20" id="XML_READER0" type="XML_READER">
+<attr name="xmlSchemaURL"><![CDATA[./src/main/resources/service/SOA-Message-1.0.xsd]]></attr>
+<attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Context namespacePaths="ns0=&quot;http://www.alainn.com/SOA/message/1.0&quot;;ns1=&quot;http://www.alainn.com/SOA/model/1.0&quot;" outPort="0" sequenceField="__id" xpath="/ns0:saveOrder/ns1:Order/items/item">
+  <Mapping cloverField="id" trim="true" xpath="id"/>
+  <Mapping cloverField="type" trim="true" xpath="type"/>
+  <Mapping cloverField="name" trim="true" xpath="name"/>
+  <Mapping cloverField="summary" trim="true" xpath="summary"/>
+  <Mapping cloverField="imageUrl" trim="true" xpath="imageUrl"/>
+  <Mapping cloverField="sku" trim="true" xpath="sku"/>
+  <Mapping cloverField="price" trim="true" xpath="price"/>
+  <Mapping cloverField="quantityInStock" trim="true" xpath="quantityInStock"/>
+  <Mapping cloverField="transactionQuantity" trim="true" xpath="transactionQuantity"/>
+  <Mapping cloverField="status" trim="true" xpath="status"/>
+</Context>
+]]></attr>
+<attr name="_data_format"><![CDATA[XML]]></attr>
+<attr name="__rootGlobalElementName"><![CDATA[{http://www.alainn.com/SOA/message/1.0}saveOrder]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="FOREACH_ITEM_RECORD:0" guiBendpoints="" id="Edge1" inPort="Port 0 (in)" metadata="f34eccb5-d5c1-4ba7-ac63-60b66d9d6a0b" outPort="Port 0 (out)" toNode="MAP_WRITER0:0"/>
+<Edge debugMode="true" fromNode="XML_READER0:0" guiBendpoints="" id="Edge0" inPort="Port 0 (in)" metadata="710f0c2c-1bfd-4535-9b26-8ed9cfd808fa" outPort="Port 0 (out)" toNode="FOREACH_ITEM_RECORD:0"/>
+</Phase>
+</Graph>
