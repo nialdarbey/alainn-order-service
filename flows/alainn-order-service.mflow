@@ -2,39 +2,39 @@
 <mule-configuration xmlns="http://www.mulesoft.com/tooling/messageflow" name="alainn-order-service">
     <global-element name="HTTP\HTTPS" type="org.mule.tooling.ui.modules.core.global.httpsConnector" entity-id="HTTP-HTTPS#1">
         <properties>
-            <property name="proxyUsername"/>
             <property name="reuseAddress"/>
-            <property name="receiveBacklog" value="0"/>
             <property name="enableCookies"/>
             <property name="serverSoTimeout" value="10000"/>
             <property name="failOnUnresolvedHost"/>
             <property name="socketSoLinger" value="0"/>
-            <property name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute" value="http://www.mulesoft.org/schema/mule/https/connector"/>
-            <property name="validateConnections" value="true"/>
             <property name="clientSoTimeout" value="10000"/>
-            <property name="keepAlive"/>
-            <property name="sendTcpNoDelay"/>
-            <property name="label"/>
-            <property name="proxyPort"/>
             <property name="socketMaxWait"/>
             <property name="cookieSpec" value="netscape"/>
-            <property name="dispatcherPoolFactory-ref"/>
-            <property name="connectionTimeout"/>
             <property name="receiveBufferSize" value="0"/>
             <property name="proxyHostname"/>
             <property name="name" value="httpsConnector"/>
             <property name="dynamicNotification"/>
             <property name="sendBufferSize" value="0"/>
             <property name="ENABLE_MODE_SWITCH"/>
-            <property name="proxyPassword"/>
             <property name="auxiliary;index" value="1"/>
+            <property name="proxyPassword"/>
+            <property name="proxyUsername"/>
+            <property name="receiveBacklog" value="0"/>
+            <property name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute" value="http://www.mulesoft.org/schema/mule/https/connector"/>
+            <property name="validateConnections" value="true"/>
+            <property name="label"/>
+            <property name="sendTcpNoDelay"/>
+            <property name="keepAlive"/>
+            <property name="proxyPort"/>
+            <property name="dispatcherPoolFactory-ref"/>
+            <property name="connectionTimeout"/>
             <property-collection name="@http://www.mulesoft.org/schema/mule/https/tls-key-store;0">
-                <property name="storePassword" value="changeit"/>
                 <property name="path" value="keystore.jks"/>
+                <property name="storePassword" value="changeit"/>
                 <property name="keyPassword" value="changeit"/>
                 <property name="isProcessed$$$$ " value="true"/>
-                <property name="auxiliary;wrapIn" value="3"/>
                 <property name="auxiliary;index" value="3"/>
+                <property name="auxiliary;wrapIn" value="3"/>
             </property-collection>
         </properties>
     </global-element>
@@ -52,9 +52,9 @@
             <property name="local-override"/>
             <property name="system-properties-mode"/>
             <property name="file-encoding"/>
-            <property name="ignore-resource-not-found"/>
-            <property name="ignore-unresolvable"/>
             <property name="auxiliary;index" value="7"/>
+            <property name="ignore-unresolvable"/>
+            <property name="ignore-resource-not-found"/>
         </properties>
     </global-element>
     <global-element name="MySQL Configuration" type="http://www.mulesoft.org/schema/mule/db/mysql-config" entity-id="MySQL Configuration#1">
@@ -70,9 +70,9 @@
             <property name="url"/>
             <property name="connectionTimeout"/>
             <property name="dataSource-ref"/>
-            <property name="springBeanConf"/>
-            <property name="databaseParametersConf"/>
             <property name="name" value="MySQL_Configuration"/>
+            <property name="databaseParametersConf"/>
+            <property name="springBeanConf"/>
             <property name="useXaTransactions"/>
             <property name="databaseURLConf"/>
             <property name="user" value="mule"/>
@@ -82,11 +82,11 @@
     <global-element name="xml_to_map" type="http://www.mulesoft.org/schema/mule/ee/data-mapper/config" entity-id="DataMapper#1">
         <properties>
             <property name="name" value="xml_to_map"/>
-            <property name="transformationGraphPath" value="xml_to_map.grf"/>
             <property name="auxiliary;index" value="9"/>
+            <property name="transformationGraphPath" value="xml_to_map.grf"/>
         </properties>
     </global-element>
-    <flow SubFlow="false" name="OrderserviceFlow1" type="http://www.mulesoft.org/schema/mule/core/flow" entity-id="90e660e8-80de-460d-8e32-b050ba2026ae">
+    <flow SubFlow="false" name="OrderserviceFlow1" type="http://www.mulesoft.org/schema/mule/core/flow" entity-id="2cdd4f5e-a7d1-451a-8339-46a807577e6d">
         <properties>
             <property name="initialState"/>
             <property name="processingStrategy2"/>
@@ -101,29 +101,29 @@
                 <graphicalData x="0" y="0" width="0" height="0"/>
                 <properties>
                     <property name="port" value="${https.port}"/>
+                    <property name="contentType"/>
+                    <property name="password"/>
+                    <property name="tracking:enable-default-events"/>
+                    <property name="exchange-pattern" value="request-response"/>
+                    <property name="path" value="order-service"/>
+                    <property name="encoding"/>
+                    <property name="responseTransformer-refs"/>
+                    <property name="auxiliary;index" value="11"/>
+                    <property name="connector-ref-outbound" value="httpsConnector"/>
+                    <property name="mimeType"/>
+                    <property name="responseTimeout"/>
                     <property name="host" value="localhost"/>
                     <property name="businessEventsLabel"/>
                     <property name="followRedirects"/>
                     <property name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute" value="http://www.mulesoft.org/schema/mule/https/endpoint"/>
                     <property name="keepAlive"/>
-                    <property name="contentType"/>
                     <property name="disableTransportTransformer"/>
-                    <property name="password"/>
-                    <property name="tracking:enable-default-events"/>
-                    <property name="exchange-pattern" value="request-response"/>
                     <property name="ref"/>
-                    <property name="transformer-refs"/>
                     <property name="httpLabel"/>
+                    <property name="transformer-refs"/>
                     <property name="address"/>
-                    <property name="path" value="order-service"/>
-                    <property name="encoding"/>
-                    <property name="responseTransformer-refs"/>
                     <property name="method"/>
                     <property name="user"/>
-                    <property name="auxiliary;index" value="11"/>
-                    <property name="connector-ref-outbound" value="httpsConnector"/>
-                    <property name="mimeType"/>
-                    <property name="responseTimeout"/>
                     <property name="connector-ref" value="httpsConnector"/>
                 </properties>
             </endpoint>
@@ -131,7 +131,7 @@
                 <graphicalData x="0" y="0" width="0" height="0"/>
                 <properties>
                     <property name="port" value="OrderPort"/>
-                    <property name="wsdlLocation" value="OrderService.wsdl"/>
+                    <property name="wsdlLocation" value="service/OrderService.wsdl"/>
                     <property name="serviceClass"/>
                     <property name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute" value="http://www.mulesoft.org/schema/mule/cxf/proxy-service"/>
                     <property name="payload" value="body"/>
@@ -142,58 +142,69 @@
                     <property name="onException"/>
                     <property name="service" value="OrderService"/>
                     <property name="mtomEnabled"/>
-                    <property name="enableMuleSoapHeaders"/>
                     <property name="soapVersion"/>
+                    <property name="enableMuleSoapHeaders"/>
                     <property name="auxiliary;index" value="12"/>
+                </properties>
+            </pattern>
+            <pattern name="DOM to XML" type="http://www.mulesoft.org/schema/mule/xml/dom-to-xml-transformer" entity-id="DOM to XML#1">
+                <graphicalData x="0" y="0" width="0" height="0"/>
+                <properties>
+                    <property name="returnClass"/>
+                    <property name="ignoreBadInput"/>
+                    <property name="encoding"/>
+                    <property name="outputEncoding"/>
+                    <property name="auxiliary;index" value="13"/>
+                    <property name="mimeType"/>
                 </properties>
             </pattern>
             <pattern name="opName" type="http://www.mulesoft.org/schema/mule/core/variable-transformer" entity-id="Variable#1">
                 <graphicalData x="0" y="0" width="0" height="0"/>
                 <properties>
                     <property name="variableName" value="opName"/>
-                    <property name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute" value="http://www.mulesoft.org/schema/mule/core/set-variable"/>
                     <property name="value" value="#[xpath('fn:local-name(/*)')]"/>
-                    <property name="auxiliary;index" value="13"/>
+                    <property name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute" value="http://www.mulesoft.org/schema/mule/core/set-variable"/>
+                    <property name="auxiliary;index" value="14"/>
                 </properties>
             </pattern>
-            <splitter index="14" name="Choice" type="org.mule.tooling.ui.modules.core.pattern.cbr" entity-id="Choice#1">
+            <splitter index="15" name="Choice" type="org.mule.tooling.ui.modules.core.pattern.cbr" entity-id="Choice#1">
                 <graphicalData x="0" y="0" width="0" height="0"/>
                 <properties>
-                    <property name=";INDEX" value="14"/>
-                    <property-collection name="6a610045-07dc-4200-80bd-f4952139ecee">
+                    <property name=";INDEX" value="15"/>
+                    <property-collection name="fdf49a2c-743b-458e-9cd6-ebdbe36312bc">
                         <property name="choice.expression" value="#[opName == 'saveOrder']"/>
                         <property-collection name="choice.attributes">
                             <property name="expression" value="#[opName == 'saveOrder']"/>
                         </property-collection>
                     </property-collection>
-                    <property-collection name="178c302e-a794-4f24-8655-01e9858072ed">
+                    <property-collection name="64928037-1a6e-41d9-827b-c8fd133f9a83">
                         <property name="choice.otherwise" value="true"/>
                         <property-collection name="choice.attributes"/>
                     </property-collection>
                 </properties>
                 <pattern name="Choice" type="org.mule.tooling.ui.modules.core.pattern.cbr" entity-id="Choice#2">
                     <properties>
-                        <property name=";INDEX" value="14"/>
-                        <property-collection name="6a610045-07dc-4200-80bd-f4952139ecee">
+                        <property name=";INDEX" value="15"/>
+                        <property-collection name="fdf49a2c-743b-458e-9cd6-ebdbe36312bc">
                             <property name="choice.expression" value="#[opName == 'saveOrder']"/>
                             <property-collection name="choice.attributes">
 <property name="expression" value="#[opName == 'saveOrder']"/>
                             </property-collection>
                         </property-collection>
-                        <property-collection name="178c302e-a794-4f24-8655-01e9858072ed">
+                        <property-collection name="64928037-1a6e-41d9-827b-c8fd133f9a83">
                             <property name="choice.otherwise" value="true"/>
                             <property-collection name="choice.attributes"/>
                         </property-collection>
                     </properties>
                 </pattern>
                 <compartment entity-id="compartment#1">
-                    <lane hadOnlyOneElement="false" index="16" isChoiceOtherwiseLane="false" entity-id="6a610045-07dc-4200-80bd-f4952139ecee">
+                    <lane hadOnlyOneElement="false" index="17" isChoiceOtherwiseLane="false" entity-id="fdf49a2c-743b-458e-9cd6-ebdbe36312bc">
                         <scope name="Transactional" type="http://www.mulesoft.org/schema/mule/ee/core/transactional-scope" entity-id="Transactional#1">
                             <graphicalData x="0" y="0" width="0" height="0"/>
                             <properties>
-<property name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute" value="http://www.mulesoft.org/schema/mule/core/transactional"/>
 <property name="action" value="ALWAYS_BEGIN"/>
-<property name="auxiliary;index" value="16"/>
+<property name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute" value="http://www.mulesoft.org/schema/mule/core/transactional"/>
+<property name="auxiliary;index" value="17"/>
                             </properties>
                             <compartment entity-id="compartment#2">
 <lane hadOnlyOneElement="false" index="0" isChoiceOtherwiseLane="false" entity-id="compartment-lane#2">
@@ -208,12 +219,12 @@
             <property name="target" value="flowVars.orderId"/>
             <property name="autoGeneratedKeysColumnIndexes" value="1"/>
             <property name="config-ref" value="MySQL_Configuration"/>
-            <property name="auxiliary;index" value="17"/>
+            <property name="auxiliary;index" value="18"/>
             <property name="autoGeneratedKeys" value="true"/>
             <property name="auxiliary;metametadataStrategy" value="new-database-metadata-strategy"/>
             <property name="bulkMode" value="false"/>
             <property-collection name="@http://www.mulesoft.org/schema/mule/db/parameterized-query;0">
-                <property name="text" value="insert into order(customer_id, total, discount, pick_up_location_id, date, pick_up_date) values(#[xpath:/mes:saveOrder/mod:CustomerId],#[xpath:/mes:saveOrder/mod:Order/total],#[xpath:/mes:saveOrder/mod:Order/discount],#[xpath:/mes:saveOrder/mod:Order/pickupLocation],#[xpath:/mes:saveOrder/mod:Order/date],#[xpath:/mes:saveOrder/mod:Order/pickupDate])"/>
+                <property name="text" value="insert into online_order(customer_id, total, discount, pickup_location) values(#[Long.valueOf(xpath('/mes:saveOrder/mod:CustomerId/text()').text)],#[Double.valueOf(xpath('/mes:saveOrder/mod:Order/total/text()').text)],#[Double.valueOf(xpath('/mes:saveOrder/mod:Order/discount/text()').text)],#[xpath:/mes:saveOrder/mod:Order/pickupLocation])"/>
             </property-collection>
         </properties>
         <description></description>
@@ -222,21 +233,21 @@
         <graphicalData x="0" y="0" width="0" height="0"/>
         <properties>
             <property name="returnClass"/>
-            <property name="input-ref"/>
             <property name="stream"/>
-            <property name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute" value="http://www.mulesoft.org/schema/mule/ee/data-mapper/transform"/>
+            <property name="input-ref"/>
             <property name="target"/>
-            <property name="config-ref" value="xml_to_map"/>
+            <property name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute" value="http://www.mulesoft.org/schema/mule/ee/data-mapper/transform"/>
             <property name="pipeSize"/>
-            <property name="auxiliary;index" value="19"/>
+            <property name="config-ref" value="xml_to_map"/>
+            <property name="auxiliary;index" value="20"/>
             <property-collection name="@http://www.mulesoft.org/schema/mule/ee/data-mapper/input-arguments;0">
-                <property name="auxiliary;wrapIn" value="20"/>
-                <property name="auxiliary;index" value="20"/>
+                <property name="auxiliary;index" value="21"/>
+                <property name="auxiliary;wrapIn" value="21"/>
                 <property-collection name="@http://www.mulesoft.org/schema/mule/ee/data-mapper/input-argument;1">
                     <property name="value" value="#[flowVars.orderId[0].GENERATED_KEY]"/>
-                    <property name="auxiliary;wrapIn" value="21"/>
-                    <property name="auxiliary;index" value="21"/>
                     <property name="key" value="orderId"/>
+                    <property name="auxiliary;index" value="22"/>
+                    <property name="auxiliary;wrapIn" value="22"/>
                 </property-collection>
             </property-collection>
         </properties>
@@ -248,41 +259,48 @@
             <property name="source"/>
             <property name="autoGeneratedKeysColumnNames"/>
             <property name="transactionalAction" value="ALWAYS_JOIN"/>
-            <property name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute" value="http://www.mulesoft.org/schema/mule/db/insert"/>
             <property name="target"/>
+            <property name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute" value="http://www.mulesoft.org/schema/mule/db/insert"/>
             <property name="autoGeneratedKeysColumnIndexes"/>
             <property name="config-ref" value="MySQL_Configuration"/>
+            <property name="auxiliary;index" value="23"/>
             <property name="autoGeneratedKeys"/>
-            <property name="auxiliary;index" value="22"/>
             <property name="bulkMode" value="true"/>
             <property-collection name="@http://www.mulesoft.org/schema/mule/db/parameterized-query;0">
                 <property name="text" value="insert into order_item(order_id, quantity, sku_item_id) values(#[payload.order_id], #[payload.quantity], #[payload.sku_item_id])"/>
-                <property name="auxiliary;wrapIn" value="23"/>
-                <property name="auxiliary;index" value="23"/>
+                <property name="auxiliary;index" value="24"/>
+                <property name="auxiliary;wrapIn" value="24"/>
             </property-collection>
         </properties>
     </pattern>
 </lane>
                             </compartment>
                         </scope>
+                        <pattern name="saveOrderResponse.xml" type="http://www.mulesoft.org/schema/mule/core/parse-template" entity-id="Parse Template#1">
+                            <graphicalData x="0" y="0" width="0" height="0"/>
+                            <properties>
+<property name="location" value="saveOrderResponse.xml"/>
+<property name="auxiliary;index" value="25"/>
+                            </properties>
+                        </pattern>
                     </lane>
-                    <lane hadOnlyOneElement="false" index="25" isChoiceOtherwiseLane="true" entity-id="178c302e-a794-4f24-8655-01e9858072ed">
+                    <lane hadOnlyOneElement="false" index="27" isChoiceOtherwiseLane="true" entity-id="64928037-1a6e-41d9-827b-c8fd133f9a83">
                         <pattern name="Exception" type="http://www.mulesoft.org/schema/mule/scripting/groovyComponent" entity-id="Groovy#1">
                             <graphicalData x="0" y="0" width="0" height="0"/>
                             <properties>
 <property name="script-ref"/>
-<property name="auxiliary;index" value="25"/>
+<property name="auxiliary;index" value="27"/>
 <property-collection name="@http://www.mulesoft.org/schema/mule/scripting/script;0">
     <property name="text" value="throw new RuntimeException(&quot;Unknown Operation: &quot; + flowVars.opName);"/>
     <property name="engine" value="Groovy"/>
-    <property name="auxiliary;wrapIn" value="26"/>
-    <property name="auxiliary;index" value="26"/>
+    <property name="auxiliary;index" value="28"/>
+    <property name="auxiliary;wrapIn" value="28"/>
 </property-collection>
 <property-collection name="@http://www.mulesoft.org/schema/mule/scripting/script-for-properties;0">
     <property name="text" value="throw new RuntimeException(&quot;Unknown Operation: &quot; + flowVars.opName);"/>
     <property name="engine" value="Groovy"/>
-    <property name="auxiliary;wrapIn" value="26"/>
-    <property name="auxiliary;index" value="26"/>
+    <property name="auxiliary;index" value="28"/>
+    <property name="auxiliary;wrapIn" value="28"/>
 </property-collection>
                             </properties>
                         </pattern>
