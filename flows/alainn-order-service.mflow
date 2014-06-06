@@ -55,7 +55,7 @@
             <property name="encryptionAlgorithm"/>
             <property name="auxiliary;index" value="7"/>
             <property name="systemPropertiesMode"/>
-            <property name="key" value="Retail4ConnectSF"/>
+            <property name="key" value="${props.key}"/>
         </properties>
     </global-element>
     <global-element name="MySQL Configuration" type="http://www.mulesoft.org/schema/mule/db/mysql-config" entity-id="MySQL Configuration#1">
@@ -94,7 +94,7 @@
             <property name="transformationGraphPath" value="map_to_xml.grf"/>
         </properties>
     </global-element>
-    <flow SubFlow="false" name="OrderserviceFlow1" type="http://www.mulesoft.org/schema/mule/core/flow" entity-id="d8fc2de5-e093-4451-bea3-e4313c19b33d">
+    <flow SubFlow="false" name="OrderserviceFlow1" type="http://www.mulesoft.org/schema/mule/core/flow" entity-id="fcf52198-5cae-437c-81a5-c836618ceced">
         <properties>
             <property name="initialState"/>
             <property name="processingStrategy2"/>
@@ -178,26 +178,26 @@
             <splitter index="16" name="Choice" type="org.mule.tooling.ui.modules.core.pattern.cbr" entity-id="Choice#1">
                 <graphicalData x="0" y="0" width="0" height="0"/>
                 <properties>
-                    <property-collection name="28b4879b-8b9a-45eb-9946-ba8cbec59b38">
+                    <property-collection name="5607195e-5000-4da7-b743-e15b46f8cba2">
                         <property name="choice.expression" value="#[opName == 'saveOrder']"/>
                         <property-collection name="choice.attributes">
                             <property name="expression" value="#[opName == 'saveOrder']"/>
                         </property-collection>
                     </property-collection>
-                    <property-collection name="3331e076-d366-478f-b0c7-ed5c92d9e06d">
+                    <property-collection name="c44e51f2-3ebe-471a-a52b-780eddc53b3f">
                         <property name="choice.expression" value="#[opName == 'getOrder']"/>
                         <property-collection name="choice.attributes">
                             <property name="expression" value="#[opName == 'getOrder']"/>
                         </property-collection>
                     </property-collection>
-                    <property-collection name="1f7c4139-7b63-4983-8ad1-e5ad8ef18bba">
+                    <property-collection name="29fb7237-7594-478a-86c2-ff405c3ad98c">
                         <property name="choice.otherwise" value="true"/>
                         <property-collection name="choice.attributes"/>
                     </property-collection>
                 </properties>
                 <pattern name="Choice" type="org.mule.tooling.ui.modules.core.pattern.cbr" entity-id="Choice#2"/>
                 <compartment entity-id="compartment#1">
-                    <lane hadOnlyOneElement="false" index="18" isChoiceOtherwiseLane="false" entity-id="28b4879b-8b9a-45eb-9946-ba8cbec59b38">
+                    <lane hadOnlyOneElement="false" index="18" isChoiceOtherwiseLane="false" entity-id="5607195e-5000-4da7-b743-e15b46f8cba2">
                         <scope name="Transactional" type="http://www.mulesoft.org/schema/mule/ee/core/transactional-scope" entity-id="Transactional#1">
                             <graphicalData x="0" y="0" width="0" height="0"/>
                             <properties>
@@ -283,7 +283,7 @@
                             </properties>
                         </pattern>
                     </lane>
-                    <lane hadOnlyOneElement="false" index="28" isChoiceOtherwiseLane="false" entity-id="3331e076-d366-478f-b0c7-ed5c92d9e06d">
+                    <lane hadOnlyOneElement="false" index="28" isChoiceOtherwiseLane="false" entity-id="c44e51f2-3ebe-471a-a52b-780eddc53b3f">
                         <pattern name="select order" type="http://www.mulesoft.org/schema/mule/db/database-connector" entity-id="Database#3">
                             <graphicalData x="0" y="0" width="0" height="0"/>
                             <properties>
@@ -318,7 +318,7 @@
                             </properties>
                         </pattern>
                     </lane>
-                    <lane hadOnlyOneElement="false" index="32" isChoiceOtherwiseLane="true" entity-id="1f7c4139-7b63-4983-8ad1-e5ad8ef18bba">
+                    <lane hadOnlyOneElement="false" index="32" isChoiceOtherwiseLane="true" entity-id="29fb7237-7594-478a-86c2-ff405c3ad98c">
                         <pattern name="Exception" type="http://www.mulesoft.org/schema/mule/scripting/groovyComponent" entity-id="Groovy#1">
                             <graphicalData x="0" y="0" width="0" height="0"/>
                             <properties>

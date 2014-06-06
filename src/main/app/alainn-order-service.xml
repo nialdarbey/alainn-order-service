@@ -44,7 +44,7 @@ http://www.mulesoft.org/schema/mule/secure-property-placeholder http://www.mules
 			uri="http://www.alainn.com/SOA/model/1.0" />
 	</mulexml:namespace-manager>
 
-    <secure-property-placeholder:config name="Secure_Property_Placeholder" key="Retail4ConnectSF" location="config.${env}.properties" doc:name="Secure Property Placeholder"/>
+    <secure-property-placeholder:config name="Secure_Property_Placeholder" key="${props.key}" location="config.${env}.properties" doc:name="Secure Property Placeholder"/>
 	<db:mysql-config name="MySQL_Configuration"
 		host="${db.host}"
 		port="3306" user="${db.user}" password="${db.password}" database="${db.database}"
